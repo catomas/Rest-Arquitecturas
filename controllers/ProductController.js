@@ -66,7 +66,7 @@ const update = async (req, res = response) => {
     if (!product) {
       return res.status(400).json({
         ok: false,
-        msg: "Orden no encontrada",
+        msg: "Producto no encontrado",
       });
     }
 
@@ -80,7 +80,7 @@ const update = async (req, res = response) => {
     console.log(error);
     return res.status(500).json({
       ok: false,
-      msg: "Algo fallo actualizando la orden",
+      msg: "Algo fallo actualizando el producto",
     });
   }
 };
@@ -99,7 +99,7 @@ const save = async (req = request, res = response) => {
     console.log(error);
     return res.status(500).json({
       ok: false,
-      msg: "Algo fallo no se puedo guardar la orden",
+      msg: "Algo fallo no se puedo guardar el producto",
       error,
     });
   }
@@ -125,7 +125,7 @@ const remove = async (req, res = response) => {
     console.log(error);
     return res.status(500).json({
       ok: false,
-      msg: "Algo fallo, no se pudo remover la Orden",
+      msg: "Algo fallo, no se pudo remover el producto",
     });
   }
 };
